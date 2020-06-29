@@ -1,3 +1,52 @@
 .container {
   text-align: center;
 }
+
+.App-intro {
+  font-size: large;
+}
+* {
+  box-sizing: border-box;
+}
+.search-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.App-header h2 {
+  margin: 0;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.movie {
+  padding: 5px 25px 10px 25px;
+  max-width: 25%;
+}
+
+input[type="submit"] {
+  padding: 5px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  width: 80px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.search-form > input[type="text"] {
+  width: 40%;
+  min-width: 170px;
+}
+
+input[type="submit"]:hover {
+  background-color: #282c34;
+  color: antiquewhite;
+}
