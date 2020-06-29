@@ -1,18 +1,10 @@
 import * as React from "react";
+import Header from "../components/common/Header";
 
-interface PageInterface {
-  color: string;
-}
-
-class App extends React.Component<PageInterface, {}> {
-  render() {
-    return (
-      <div>
-        <h1>Welcome to React with Typescript</h1>
-        <p>The color of this page is: {this.props.color}</p>
-      </div>
-    );
-  }
-}
-
-export default App;
+const App = () => {
+  return (
+    <div>
+      <Header text="mini-movie-app" />
+    </div>
+  );
+};
