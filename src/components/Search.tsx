@@ -10,7 +10,7 @@ const Search = () => {
     e.preventDefault();
   };
   return (
-    <form>
+    <form className="search-form">
       <input
         value={searchValue}
         onChange={onChangeSearchinputChanges}
