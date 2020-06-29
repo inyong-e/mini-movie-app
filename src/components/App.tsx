@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 
+import { MOVIE_API_URL } from "../secret"; // gitignore
 import "../App.css";
 
 import Header from "../common/Header";
@@ -15,8 +16,6 @@ interface IMovie {
   imdbID: string;
 }
 
-const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=59a43818";
-
 const App = () => {
   const [movies, setMovies] = useState([] as IMovie[]);
   const [loading, setLoading] = useState(true);
@@ -26,6 +25,7 @@ const App = () => {
     fetch(MOVIE_API_URL)
       .then(response => response.json())
       .then(jsonResponse => {
+        console.log(2);
         setMovies(jsonResponse.Search);
         setLoading(false);
       });
@@ -47,7 +47,6 @@ const App = () => {
         }
       });
   };
-
   return (
     <div className="container">
       <Header text="mini-movie-app" />
